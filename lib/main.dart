@@ -205,7 +205,7 @@ class FacebookApp extends StatelessWidget {
 
 
 
-      // IconButton(onPressed:   (){}, icon: Icon(Icons.favorite, size: 55,color: Colors.red,))
+      IconButton(onPressed:   (){}, icon: Icon(Icons.favorite, size: 55,color: Colors.red,))
        //بدء
      ],
       mainAxisAlignment : MainAxisAlignment.spaceEvenly, //  اضافة مسافات حول كل كونتينر  
