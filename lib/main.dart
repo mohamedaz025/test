@@ -27,7 +27,7 @@ class FacebookApp extends StatelessWidget {
     return Scaffold (
       //
       appBar: AppBar(
-        title: Text("facebook",style: TextStyle(color: Colors.blue[900],fontSize: 27,fontWeight: FontWeight.w900)),
+        title: Text("belquis",style: TextStyle(color: Colors.orange[900],fontSize: 27,fontWeight: FontWeight.w900)),
         leading: IconButton(icon: Icon(Icons.menu, size: 30 ),
         onPressed:(){}),  
       
@@ -46,11 +46,15 @@ class FacebookApp extends StatelessWidget {
         onPressed: (){},
         child: Icon(Icons.add, size: 30,)),
     
-     body: SingleChildScrollView(
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+     body:
+     
+      SingleChildScrollView( //  تستخدم لعمل اسكرول 
+       scrollDirection: Axis.vertical ,  //  تستخدم لعمل اسكرول بالطول
+      // scrollDirection: Axis.horizontal,    //  تستخدم لعمل اسكرول بالعرض
+      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),  //  تستخدم لعمل مسافة بين كل كونينر
        child: Column(
        children: [
-        SizedBox(height: 50,),
+        
         Container(
       // ignore: sort_child_properties_last
       child: Text(" belquis",
@@ -94,7 +98,7 @@ class FacebookApp extends StatelessWidget {
       decoration: BoxDecoration(
       color: Colors.blueAccent,  // لتغير لون خلفية الكونتينر 
       border: Border.all(color: Colors.yellow, width: 10),  //  لتغير لون وعرض الحواف
-      // borderRadius: BorderRadius.circular(50),   //  لتحديد درجة ميلان الحواف   
+      borderRadius: BorderRadius.circular(50),   //  لتحديد درجة ميلان الحواف   
       // shape: BoxShape.circle, //  لعمل حواف مستديره
       ),
      ),
@@ -130,7 +134,7 @@ class FacebookApp extends StatelessWidget {
     
      ),
       // color: Colors.orange, //  لتغير خلفية الكونينر
-      margin:EdgeInsets.fromLTRB(0,0, 0, 30),  //  لتحديد المسافة من كل الاتجهات للكونينر
+      margin:EdgeInsets.fromLTRB(0,0, 0, 0),  //  لتحديد المسافة من كل الاتجهات للكونينر
       // margin: EdgeInsets.symmetric(vertical: 111,horizontal: 66),   //  لتحديد المسافة من الاعلي والسفل برقم واحد والمين واليسار برقم واحد
       // margin: EdgeInsets.all(100),   //  لتحديد المسافة من كل الاتجهات برقم واحد
       // padding: EdgeInsets.fromLTRB(11, 11, 11,11), //  لعمل مسافة داخلية داخل الكونينر
@@ -218,7 +222,7 @@ class FacebookApp extends StatelessWidget {
       shape: BoxShape.circle, //  لعمل حواف مستديره
       ),
      ),
-        SizedBox(height: 50,),
+        SizedBox(height: 50,),   //  لعمل مسافة بالطول
         Container(
             child: IconButton(onPressed:   (){}, icon: Icon(Icons.favorite, size: 100,color: Colors.red,)),
       height: 150,  //  لتفير ارتفاع الكونتينر
@@ -230,7 +234,7 @@ class FacebookApp extends StatelessWidget {
       shape: BoxShape.circle, //  لعمل حواف مستديره
       ),
      ),
-        SizedBox(height: 50,),
+        SizedBox(width: 50,),  //  لعمل مسافة بالعرض
         Container(
             child: IconButton(onPressed:   (){}, icon: Icon(Icons.favorite, size: 100,color: Colors.red,)),
       height: 150,  //  لتفير ارتفاع الكونتينر
@@ -242,12 +246,13 @@ class FacebookApp extends StatelessWidget {
       shape: BoxShape.circle, //  لعمل حواف مستديره
       ),
      ),
-        SizedBox(height: 50,),
+        SizedBox(width: 50,),
 
 
       // IconButton(onPressed:   (){}, icon: Icon(Icons.favorite, size: 55,color: Colors.red,))
       
      ],
+
       // mainAxisAlignment : MainAxisAlignment.spaceEvenly, //  اضافة مسافات حول كل كونتينر  
       // crossAxisAlignment: CrossAxisAlignment.end,    //  تحريك الكونتينر علي حثب حجم اعرض كونتينر
      ),
